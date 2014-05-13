@@ -42,6 +42,8 @@ $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
 
+$route['admin'] = 'admin';
+
 $route['default_controller'] = 'home';
 
 /* End of file routes.php */

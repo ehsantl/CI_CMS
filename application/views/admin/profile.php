@@ -1,3 +1,13 @@
+<?php
+$this->load->helper('form');
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>
+
+
 <?php $this->load->view('header') ?>
 
     <div class="container">
@@ -5,9 +15,11 @@
         <div class="row">
             <div class="col-lg-8">
                   
+                <h1>Profile</h1>
                 
-                <?php echo $content; ?>
-                
+                Welcome
+
+                                   
             </div>
 
             <?php $this->load->view('sidebar') ?>
@@ -18,12 +30,3 @@
 
     </div>
     <!-- /.container -->
-
-    <!-- JavaScript -->
-    <script src="<?php echo base_url();?>js/jquery-1.10.2.js"></script>
-    <script src="<?php echo base_url();?>js/bootstrap.js"></script>
-
-</body>
-
-</html>
-
