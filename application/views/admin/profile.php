@@ -17,9 +17,13 @@ $this->load->helper('form');
                   
                 <h1>Profile</h1>
                 
-                Welcome
-
-                                   
+                Welcome <strong><?=$this->session->userdata('email'); ?></strong>
+                
+                <hr>
+                <ul>
+                    <li><a href="<?=site_url('admin/posts/newpost') ?>">Add a New Post</a></li>
+                </ul>
+                                  
             </div>
 
             <?php $this->load->view('sidebar') ?>

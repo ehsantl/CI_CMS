@@ -27,7 +27,29 @@ class Users_model extends CI_Model {
                     'password' => $password
             );
 
-            return $this->db->insert('users', $data);
+            if ($this->db->insert('users', $data)) {
+                return $this->db->insert_id();
+            } else {
+                return -1;
+            }
     }
-        
+ 
+    public function checkUser($email, $password) {
+            $this->load->helper('url');
+
+            $data = array(
+                    'email' => $email,
+                    'password' => $password
+            );
+
+            $query = $this->db->get_where('users', $data);
+            
+            if ($query->num_rows()) {
+                $user = $query->row();
+                return $user->id;
+            } else {
+                return -1;
+            }
+    }
+    
 }

@@ -16,7 +16,10 @@ $this->load->helper('form');
             <div class="col-lg-8">
                   
                 <h1>Login</h1>
-                <?php echo form_open('admin/login') ?>
+                
+                <p class="msg msg-error"> <?php echo validation_errors(); ?>  </p>
+                                
+                <?php echo form_open('admin/signin') ?>
                     <input type="text" name="email" placeholder="email address" />
                     <input type="password" name="password" />
                     <input type="submit" name="login" value="Login" />

@@ -28,7 +28,12 @@ class Posts extends CI_Controller {
         $data['posts'] = $this->posts_model->searchPosts($query);
         $this->load->view('index', $data);
         
-    }    
+    } 
+
+    public function newPost() {
+        $this->load->view('admin/posts/newpost');       
+
+    }   
     
  }
 
